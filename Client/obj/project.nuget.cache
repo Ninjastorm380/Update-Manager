@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "UffviDkueznJBaHjmw5wrn5FO0GdSCwT6kr/GoBLb7zkKTJS9LFGlYEtfBm4/o4EuD0ndHAKNJxPge8vSksGoQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\EpicDev\\Documents\\Visual Studio 2019\\Projects\\Update Manager\\RC\\0001\\Update Manager\\Client\\Client.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\EpicDev\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\EpicDev\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
