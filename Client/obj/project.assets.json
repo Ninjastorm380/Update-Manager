@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EpicDev\\Documents\\Visual Studio 2019\\Projects\\Update Manager\\RC\\0001\\Update Manager\\Client\\Client.vbproj",
+      "projectUniqueName": "C:\\Users\\EpicDev\\Documents\\Visual Studio 2019\\Projects\\Update Manager\\RC\\0002\\Update Manager\\Client\\Client.vbproj",
       "projectName": "Client",
-      "projectPath": "C:\\Users\\EpicDev\\Documents\\Visual Studio 2019\\Projects\\Update Manager\\RC\\0001\\Update Manager\\Client\\Client.vbproj",
+      "projectPath": "C:\\Users\\EpicDev\\Documents\\Visual Studio 2019\\Projects\\Update Manager\\RC\\0002\\Update Manager\\Client\\Client.vbproj",
       "packagesPath": "C:\\Users\\EpicDev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EpicDev\\Documents\\Visual Studio 2019\\Projects\\Update Manager\\RC\\0001\\Update Manager\\Client\\obj\\",
+      "outputPath": "C:\\Users\\EpicDev\\Documents\\Visual Studio 2019\\Projects\\Update Manager\\RC\\0002\\Update Manager\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\EpicDev\\AppData\\Roaming\\NuGet\\NuGet.Config",

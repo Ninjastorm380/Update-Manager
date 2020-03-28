@@ -1,0 +1,15 @@
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ServerUI\bin\Debug\ServerUI.exe.config
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ServerUI\bin\Debug\ServerUI.exe
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ServerUI\bin\Debug\ServerUI.pdb
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ServerUI\bin\Debug\ServerUI.xml
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ServerUI\obj\Debug\ServerUI.vbprojAssemblyReference.cache
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ServerUI\obj\Debug\ServerUI.Resources.resources
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ServerUI\obj\Debug\ServerUI.vbproj.GenerateResource.cache
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ServerUI\obj\Debug\ServerUI.vbproj.CoreCompileInputs.cache
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ServerUI\obj\Debug\ServerUI.exe
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ServerUI\obj\Debug\ServerUI.xml
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ServerUI\obj\Debug\ServerUI.pdb
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ServerUI\bin\Debug\Server.dll
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ServerUI\bin\Debug\Server.pdb
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ServerUI\obj\Debug\ServerUI.vbproj.CopyComplete
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ServerUI\obj\Debug\ServerUI.MainForm.resources

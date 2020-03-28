@@ -1,0 +1,15 @@
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\bin\Debug\ClientUI.exe.config
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\bin\Debug\ClientUI.exe
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\bin\Debug\ClientUI.pdb
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\bin\Debug\ClientUI.xml
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\obj\Debug\ClientUI.vbprojAssemblyReference.cache
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\obj\Debug\ClientUI.Resources.resources
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\obj\Debug\ClientUI.vbproj.GenerateResource.cache
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\obj\Debug\ClientUI.vbproj.CoreCompileInputs.cache
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\obj\Debug\ClientUI.exe
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\obj\Debug\ClientUI.xml
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\obj\Debug\ClientUI.pdb
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\bin\Debug\Client.dll
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\bin\Debug\Client.pdb
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\obj\Debug\ClientUI.vbproj.CopyComplete
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\obj\Debug\ClientUI.MainForm.resources
