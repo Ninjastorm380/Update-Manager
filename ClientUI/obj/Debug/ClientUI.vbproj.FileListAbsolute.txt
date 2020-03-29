@@ -13,3 +13,11 @@ C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Up
 C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\bin\Debug\Client.pdb
 C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\obj\Debug\ClientUI.vbproj.CopyComplete
 C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\obj\Debug\ClientUI.MainForm.resources
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\bin\Debug\HtmlRenderer.dll
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\bin\Debug\HtmlRenderer.WinForms.dll
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\bin\Debug\HtmlRenderer.pdb
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\bin\Debug\HtmlRenderer.WinForms.pdb
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\obj\Debug\ClientUI.ProgramListItem.resources
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\obj\Debug\ClientUI.RenderedDualProgressbar.resources
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\obj\Debug\ClientUI.RenderedProgressbar.resources
+C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\ClientUI\obj\Debug\ClientUI.ProgramList.resources

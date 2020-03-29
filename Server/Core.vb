@@ -41,7 +41,6 @@ Public Class PairedConnection
     End Sub
 
     Private Sub PingThread()
-        Debug.Print("ping start")
         While Connected = True And Server.Running = True
             Try
                 PingWriter.WriteStream(SerializeArray({"server.connections.ping"}))
@@ -55,7 +54,6 @@ Public Class PairedConnection
         If PairedConnectionDictionary.ContainsKey(RemoteAddress) = True Then
             PairedConnectionDictionary.Remove(RemoteAddress)
         End If
-        Debug.Print("ping end")
     End Sub
     Private Sub DataThread()
         While Server.Running = True
@@ -63,6 +61,8 @@ Public Class PairedConnection
                 If DataReader.EndOfStream = False Then
                     Dim Data As String() = DeserializeArray(DataReader.ReadStream)
                     Select Case Data(0)
+                        Case "server.updates.check"
+                            DataWriter.WriteStream(SerializeArray({"server.updates.check.return", "0", ""}))
                         Case "server.connections.disconnect"
                             Connected = False
                             Exit While
@@ -113,12 +113,9 @@ Public Class Core : Inherits ServerBase
                                                          If Connected = True Then
                                                              If Reader.EndOfStream = False Then
                                                                  Dim Data As String() = DeserializeArray(Reader.ReadStream)
-
                                                                  Select Case Data(0)
                                                                      Case "connection.mode.set"
-                                                                         Debug.Print("connection.mode.set")
                                                                          If Data(1) = "0" Then
-                                                                             Debug.Print("data")
                                                                              Dim NewConnection As New PairedConnection(Me)
                                                                              NewConnection.InitalizeData(Client)
                                                                              PairedConnectionDictionary.Add(NewConnection.Address, NewConnection)
@@ -126,22 +123,16 @@ Public Class Core : Inherits ServerBase
                                                                              ModuleRunning = False
                                                                              Exit While
                                                                          ElseIf Data(1) = "1" Then
-                                                                             Debug.Print("ping")
                                                                              If PairedConnectionDictionary.ContainsKey(Data(2)) = True Then
-                                                                                 Debug.Print("data exists")
                                                                                  Dim Connection As PairedConnection = PairedConnectionDictionary(Data(2))
                                                                                  Connection.InitalizePing(Client)
                                                                                  Writer.WriteStream(SerializeArray({"connection.mode.set", "0", "1"}))
                                                                                  ModuleRunning = False
                                                                                  Exit While
                                                                              Else
-                                                                                 Debug.Print("data doesn't exists")
-
                                                                                  Writer.WriteStream(SerializeArray({"connection.mode.set", "1"}))
                                                                              End If
                                                                          Else
-                                                                             Debug.Print("command error")
-
                                                                              Writer.WriteStream(SerializeArray({"connection.mode.set", "2"}))
                                                                          End If
                                                                  End Select

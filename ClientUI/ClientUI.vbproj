@@ -48,6 +48,12 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlRenderer, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlRenderer.Core.1.5.1-beta1\lib\net45\HtmlRenderer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer.WinForms, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlRenderer.WinForms.1.5.1-beta1\lib\net45\HtmlRenderer.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -95,6 +101,33 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ProgramList.Designer.vb">
+      <DependentUpon>ProgramList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramList.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramListItem.Designer.vb">
+      <DependentUpon>ProgramListItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramListItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramListItemToolstrip.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RenderedDualProgressbar.Designer.vb">
+      <DependentUpon>RenderedDualProgressbar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RenderedDualProgressbar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RenderedProgressbar.Designer.vb">
+      <DependentUpon>RenderedProgressbar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RenderedProgressbar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">
@@ -105,6 +138,18 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramList.resx">
+      <DependentUpon>ProgramList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramListItem.resx">
+      <DependentUpon>ProgramListItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenderedDualProgressbar.resx">
+      <DependentUpon>RenderedDualProgressbar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RenderedProgressbar.resx">
+      <DependentUpon>RenderedProgressbar.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +163,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Client\Client.vbproj">

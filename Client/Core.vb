@@ -1,4 +1,5 @@
 Public Class Core
+    Public Event ConnectionFailed As EventHandler(Of Exception)
     Dim PingClient As Cryptography.TcpClient
     Dim DataClient As Cryptography.TcpClient
     Dim PingReader As Cryptography.StreamReader
@@ -14,35 +15,20 @@ Public Class Core
     End Property
     Sub Connect(Address As String)
         Dim InvokeThread As New Threading.Thread(Sub()
-                                                     Dim AddressData As String() = Address.Split(":")
-                                                     PingClient = New Cryptography.TcpClient(AddressData(0), AddressData(1), "f1G5S#8gvs@")
-                                                     'Threading.Thread.Sleep(100)
-                                                     DataClient = New Cryptography.TcpClient(AddressData(0), AddressData(1), "f1G5S#8gvs@")
-                                                     'Threading.Thread.Sleep(100)
-                                                     PingReader = New Cryptography.StreamReader(PingClient)
-                                                     PingWriter = New Cryptography.StreamWriter(PingClient)
-                                                     DataReader = New Cryptography.StreamReader(DataClient)
-                                                     DataWriter = New Cryptography.StreamWriter(DataClient)
-                                                     Dim InitOK As Boolean = False
-                                                     Dim Output As String() = {}
-                                                     DataWriter.WriteStream(SerializeArray({"connection.mode.set", "0"}))
-                                                     Do While True
-                                                         If DataReader.EndOfStream = False Then
-                                                             Output = DeserializeArray(DataReader.ReadStream)
-                                                             If Output(0) = "connection.mode.set" Then
-                                                                 InitOK = True
-                                                                 Exit Do
-                                                             Else
-                                                                 InitOK = False
-                                                                 Threading.Thread.Sleep(10)
-                                                             End If
-                                                         End If
-                                                     Loop
-                                                     If Output(0) = "connection.mode.set" AndAlso Output(1) = "0" And InitOK = True Then
-                                                         PingWriter.WriteStream(SerializeArray({"connection.mode.set", "1", Output(3)}))
+                                                     Try
+                                                         Dim AddressData As String() = Address.Split(":")
+                                                         PingClient = New Cryptography.TcpClient(AddressData(0), AddressData(1), "f1G5S#8gvs@")
+                                                         DataClient = New Cryptography.TcpClient(AddressData(0), AddressData(1), "f1G5S#8gvs@")
+                                                         PingReader = New Cryptography.StreamReader(PingClient)
+                                                         PingWriter = New Cryptography.StreamWriter(PingClient)
+                                                         DataReader = New Cryptography.StreamReader(DataClient)
+                                                         DataWriter = New Cryptography.StreamWriter(DataClient)
+                                                         Dim InitOK As Boolean = False
+                                                         Dim Output As String() = {}
+                                                         DataWriter.WriteStream(SerializeArray({"connection.mode.set", "0"}))
                                                          Do While True
-                                                             If PingReader.EndOfStream = False Then
-                                                                 Output = DeserializeArray(PingReader.ReadStream)
+                                                             If DataReader.EndOfStream = False Then
+                                                                 Output = DeserializeArray(DataReader.ReadStream)
                                                                  If Output(0) = "connection.mode.set" Then
                                                                      InitOK = True
                                                                      Exit Do
@@ -53,27 +39,42 @@ Public Class Core
                                                              End If
                                                          Loop
                                                          If Output(0) = "connection.mode.set" AndAlso Output(1) = "0" And InitOK = True Then
-                                                             InitOK = True
+                                                             PingWriter.WriteStream(SerializeArray({"connection.mode.set", "1", Output(3)}))
+                                                             Do While True
+                                                                 If PingReader.EndOfStream = False Then
+                                                                     Output = DeserializeArray(PingReader.ReadStream)
+                                                                     If Output(0) = "connection.mode.set" Then
+                                                                         InitOK = True
+                                                                         Exit Do
+                                                                     Else
+                                                                         InitOK = False
+                                                                         Threading.Thread.Sleep(10)
+                                                                     End If
+                                                                 End If
+                                                             Loop
+                                                             If Output(0) = "connection.mode.set" AndAlso Output(1) = "0" And InitOK = True Then
+                                                                 InitOK = True
+                                                             Else
+                                                                 InitOK = False
+                                                             End If
                                                          Else
                                                              InitOK = False
                                                          End If
-                                                     Else
-                                                         InitOK = False
-                                                     End If
-                                                     If InitOK = True Then
-                                                         IsRunning = True
-                                                         Connected = True
-                                                         Dim HeartbeatThread As New Threading.Thread(AddressOf PingThread) : HeartbeatThread.Start()
-                                                         Dim Thread As New Threading.Thread(AddressOf DataThread) : Thread.Start()
-                                                     End If
-
+                                                         If InitOK = True Then
+                                                             IsRunning = True
+                                                             Connected = True
+                                                             Dim HeartbeatThread As New Threading.Thread(AddressOf PingThread) : HeartbeatThread.Start()
+                                                             Dim Thread As New Threading.Thread(AddressOf DataThread) : Thread.Start()
+                                                         End If
+                                                     Catch ex As Exception
+                                                         RaiseEvent ConnectionFailed(Me, ex)
+                                                     End Try
                                                  End Sub) : InvokeThread.Start()
     End Sub
     Sub Disconnect()
         If IsRunning = True And Connected = True Then DataWriter.WriteStream(SerializeArray({"server.connections.disconnect"}))
     End Sub
     Private Sub PingThread()
-        Debug.Print("ping start")
         While Connected = True And IsRunning = True
             Try
                 PingWriter.WriteStream(SerializeArray({"server.connections.ping"}))
@@ -84,14 +85,16 @@ Public Class Core
             Threading.Thread.Sleep(100)
         End While
         Connected = False
-        Debug.Print("ping end")
     End Sub
     Private Sub DataThread()
+        DataWriter.WriteStream(SerializeArray({"server.updates.check"}))
         While IsRunning = True
             If Connected = True Then
                 If DataReader.EndOfStream = False Then
                     Dim Data As String() = DeserializeArray(DataReader.ReadStream)
                     Select Case Data(0)
+                        Case "server.updates.check.return"
+                            Debug.Print("check returned " + Data(1))
                         Case "server.connections.disconnect.return"
                             If Data(1) = "0" Then
                                 Try : PingClient.Close() : Catch : End Try
