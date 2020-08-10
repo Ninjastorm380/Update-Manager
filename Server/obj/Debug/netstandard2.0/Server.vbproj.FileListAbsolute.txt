@@ -1,9 +1,0 @@
-C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\Server\bin\Debug\netstandard2.0\Server.deps.json
-C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\Server\bin\Debug\netstandard2.0\Server.dll
-C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\Server\bin\Debug\netstandard2.0\Server.pdb
-C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\Server\obj\Debug\netstandard2.0\Server.vbprojAssemblyReference.cache
-C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\Server\obj\Debug\netstandard2.0\Server.vbproj.CoreCompileInputs.cache
-C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\Server\obj\Debug\netstandard2.0\Server.AssemblyInfoInputs.cache
-C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\Server\obj\Debug\netstandard2.0\Server.AssemblyInfo.vb
-C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\Server\obj\Debug\netstandard2.0\Server.dll
-C:\Users\EpicDev\Documents\Visual Studio 2019\Projects\Update Manager\RC\0002\Update Manager\Server\obj\Debug\netstandard2.0\Server.pdb
