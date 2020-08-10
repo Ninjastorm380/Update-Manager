@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EpicDev\\source\\repos\\Update-Manager\\UpdateCore\\UpdateCore.vbproj",
+      "projectUniqueName": "C:\\Users\\EpicDev\\source\\repos\\Ninjastorm380\\UpdateManager\\UpdateCore\\UpdateCore.vbproj",
       "projectName": "UpdateCore",
-      "projectPath": "C:\\Users\\EpicDev\\source\\repos\\Update-Manager\\UpdateCore\\UpdateCore.vbproj",
+      "projectPath": "C:\\Users\\EpicDev\\source\\repos\\Ninjastorm380\\UpdateManager\\UpdateCore\\UpdateCore.vbproj",
       "packagesPath": "C:\\Users\\EpicDev\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EpicDev\\source\\repos\\Update-Manager\\UpdateCore\\obj\\",
+      "outputPath": "C:\\Users\\EpicDev\\source\\repos\\Ninjastorm380\\UpdateManager\\UpdateCore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\EpicDev\\AppData\\Roaming\\NuGet\\NuGet.Config",
