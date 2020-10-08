@@ -1,0 +1,9 @@
+E:\repositories\Ninjastorm380\Update Manager\UpdateCore\bin\Debug\netstandard2.0\UpdateCore.deps.json
+E:\repositories\Ninjastorm380\Update Manager\UpdateCore\bin\Debug\netstandard2.0\UpdateCore.dll
+E:\repositories\Ninjastorm380\Update Manager\UpdateCore\bin\Debug\netstandard2.0\UpdateCore.pdb
+E:\repositories\Ninjastorm380\Update Manager\UpdateCore\obj\Debug\netstandard2.0\UpdateCore.vbprojAssemblyReference.cache
+E:\repositories\Ninjastorm380\Update Manager\UpdateCore\obj\Debug\netstandard2.0\UpdateCore.AssemblyInfoInputs.cache
+E:\repositories\Ninjastorm380\Update Manager\UpdateCore\obj\Debug\netstandard2.0\UpdateCore.AssemblyInfo.vb
+E:\repositories\Ninjastorm380\Update Manager\UpdateCore\obj\Debug\netstandard2.0\UpdateCore.vbproj.CoreCompileInputs.cache
+E:\repositories\Ninjastorm380\Update Manager\UpdateCore\obj\Debug\netstandard2.0\UpdateCore.dll
+E:\repositories\Ninjastorm380\Update Manager\UpdateCore\obj\Debug\netstandard2.0\UpdateCore.pdb

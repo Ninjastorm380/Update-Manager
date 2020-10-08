@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "kFgEu9fXFa/uygmxIPERQMjywYrwqQ+ExwtFn9Ba6el4MuSW5Rq0/IOp5zs71FZstDtQsX+aqIP+DBUIE5IYlQ==",
+  "dgSpecHash": "iXrgS7EkQNx0+uJpQ7PtxuyRs5z7HYzcBPz2u31HLtBYnmLRUqfn0WDFZJhCbB08K2AqS8ZL2HWLc8gbBymlZA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\EpicDev\\source\\repos\\Ninjastorm380\\UpdateManager\\UpdateCore\\UpdateCore.vbproj",
+  "projectFilePath": "E:\\repositories\\Ninjastorm380\\Update Manager\\UpdateCore\\UpdateCore.vbproj",
   "expectedPackageFiles": [
-    "C:\\Users\\EpicDev\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\EpicDev\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Marcus\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Marcus\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

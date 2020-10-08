@@ -50,14 +50,6 @@
         End Function
         Private Sub QueueMethod()
             Dim QueueLimiter As New ThreadLimiter(150)
-            Dim printer As New Threading.Thread(Sub()
-                                                    While Connected = True
-                                                        Debug.Print(QueueLimiter.IterationsPerSecond.ToString)
-                                                        Threading.Thread.Sleep(1000)
-                                                    End While
-                                                End Sub)
-            printer.Start()
-
             While Connected = True
                 Connected = Not StreamDisposed()
                 Try
@@ -69,6 +61,12 @@
                         Stream.Read(Input, 0, Input.Length)
                         Dim Data As Byte()() = Serialization.DeserializeArray(Cryptography.DecryptAES256(Input, CryptographicKey))
                         Dim ID As String = System.Text.ASCIIEncoding.ASCII.GetString(Data(0))
+                        If ReadQueue.ContainsKey(ID) = False Then
+                            Do Until ReadQueue.ContainsKey(ID) = True
+
+                            Loop
+
+                        End If
                         If Closing = False Then ReadQueue.Item(ID).Add(Data(1))
                     End If
                 Catch ex As ObjectDisposedException

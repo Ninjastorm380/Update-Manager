@@ -32,16 +32,7 @@
     Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Server.Stop()
     End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
-        With New FolderBrowserDialog
-            If .ShowDialog = DialogResult.OK Then
-                Label2.Text = "Generating Metadata: 0%"
-                UpdateCore.MetadataGenerator.GenerateMetadataAsync(MetaSaveDirectory, .SelectedPath, "", "", "", AddressOf MetadataGenProgressUpdate, AddressOf MetadataGenComplete)
-            End If
-        End With
-    End Sub
-    Private Sub MetadataGenProgressUpdate(state As Integer, currentprogress As Integer, maximumprogress As Integer)
+    Private Sub MetadataGenProgressUpdate(currentprogress As Integer, maximumprogress As Integer)
         Invoke(Sub()
 
                    Dim Progressdouble As Double = currentprogress / maximumprogress
@@ -50,36 +41,40 @@
                    RenderedProgressbar1.ProgressMaximum2 = maximumprogress
                    RenderedProgressbar1.ProgressValue1 = currentprogress
                    RenderedProgressbar1.ProgressValue2 = currentprogress
-                   If state = 0 Then
-                       Label2.Text = "Generating Metadata: " + ProgressString + "%"
-                   ElseIf state = 1 Then
-                       Label2.Text = "Serializing Metadata: " + ProgressString + "%"
-                   End If
+                   Label2.Text = "Generating Metadata: " + ProgressString + "%"
                End Sub)
     End Sub
-    Private Sub MetadataGenComplete()
+    Private Sub MetadataGenComplete(ByRef MetaObjects As UpdateCore.MetadataGenerator.MetaObject())
+        Dim Stream As New IO.FileStream(MetaSaveDirectory + "/" + SaveName, IO.FileMode.Create)
+        UpdateCore.MetadataGenerator.WriteMetadata(MetaObjects, Stream)
+        Stream.Close()
+        Stream.Dispose()
         Invoke(Sub()
                    Label2.Text = "Metadata Generation Complete!"
                    RenderedProgressbar1.ProgressMaximum1 = 1
                    RenderedProgressbar1.ProgressMaximum2 = 1
                    RenderedProgressbar1.ProgressValue1 = 0
                    RenderedProgressbar1.ProgressValue2 = 0
-               End Sub)
-        ListBox2.Items.Clear()
-        For Each x In IO.Directory.GetFiles(MetaSaveDirectory)
-            ListBox2.Items.Add(IO.Path.GetFileName(x))
-        Next
-    End Sub
 
+                   ListBox2.Items.Clear()
+                   For Each x In IO.Directory.GetFiles(MetaSaveDirectory)
+                       ListBox2.Items.Add(IO.Path.GetFileName(x))
+                   Next
+               End Sub)
+
+    End Sub
+    Dim SaveName As String
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         With New MetadataGenForm
             If .ShowDialog = DialogResult.OK Then
-                UpdateCore.MetadataGenerator.GenerateMetadataAsync(MetaSaveDirectory, .SourceDirectory, .ProgramName, .ProgramID, .MetadataFileName, AddressOf MetadataGenProgressUpdate, AddressOf MetadataGenComplete)
+                SaveName = .MetadataFileName
+                UpdateCore.MetadataGenerator.GenerateMetadataAsync(.SourceDirectory, .ProgramName, .ProgramID, AddressOf MetadataGenComplete, AddressOf MetadataGenProgressUpdate)
             End If
         End With
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If IO.Directory.Exists(MetaSaveDirectory) = False Then IO.Directory.CreateDirectory(MetaSaveDirectory)
         For Each x In IO.Directory.GetFiles(MetaSaveDirectory)
             ListBox2.Items.Add(IO.Path.GetFileName(x))
         Next
@@ -102,7 +97,8 @@
     End Sub
 
     Private Sub Button3_Click_1(sender As Object, e As EventArgs) Handles Button3.Click
-        UpdateCore.MetadataGenerator.GenerateMetadataAsync(MetaSaveDirectory, TextBox5.Text, TextBox4.Text, TextBox2.Text, TextBox3.Text, AddressOf MetadataGenProgressUpdate, AddressOf MetadataGenComplete)
+        SaveName = TextBox3.Text
+        UpdateCore.MetadataGenerator.GenerateMetadataAsync(TextBox5.Text, TextBox4.Text, TextBox2.Text, AddressOf MetadataGenComplete, AddressOf MetadataGenProgressUpdate)
 
     End Sub
 End Class

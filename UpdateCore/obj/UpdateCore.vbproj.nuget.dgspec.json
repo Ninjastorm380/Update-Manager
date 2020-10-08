@@ -1,27 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EpicDev\\source\\repos\\Ninjastorm380\\UpdateManager\\UpdateCore\\UpdateCore.vbproj": {}
+    "E:\\repositories\\Ninjastorm380\\Update Manager\\UpdateCore\\UpdateCore.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\EpicDev\\source\\repos\\Ninjastorm380\\UpdateManager\\UpdateCore\\UpdateCore.vbproj": {
+    "E:\\repositories\\Ninjastorm380\\Update Manager\\UpdateCore\\UpdateCore.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EpicDev\\source\\repos\\Ninjastorm380\\UpdateManager\\UpdateCore\\UpdateCore.vbproj",
+        "projectUniqueName": "E:\\repositories\\Ninjastorm380\\Update Manager\\UpdateCore\\UpdateCore.vbproj",
         "projectName": "UpdateCore",
-        "projectPath": "C:\\Users\\EpicDev\\source\\repos\\Ninjastorm380\\UpdateManager\\UpdateCore\\UpdateCore.vbproj",
-        "packagesPath": "C:\\Users\\EpicDev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EpicDev\\source\\repos\\Ninjastorm380\\UpdateManager\\UpdateCore\\obj\\",
+        "projectPath": "E:\\repositories\\Ninjastorm380\\Update Manager\\UpdateCore\\UpdateCore.vbproj",
+        "packagesPath": "C:\\Users\\Marcus\\.nuget\\packages\\",
+        "outputPath": "E:\\repositories\\Ninjastorm380\\Update Manager\\UpdateCore\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\EpicDev\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Marcus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Marcus\\AppData\\Roaming\\Cosmos User Kit\\packages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -55,7 +60,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

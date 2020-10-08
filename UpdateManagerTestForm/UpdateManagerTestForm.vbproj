@@ -129,5 +129,11 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UpdateCore\UpdateCore.vbproj">
+      <Project>{d307ad69-ce0e-4619-bfeb-18e4159aebc3}</Project>
+      <Name>UpdateCore</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

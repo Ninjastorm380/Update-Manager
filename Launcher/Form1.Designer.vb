@@ -28,9 +28,9 @@ Partial Class Form1
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.RenderedProgressbar1 = New Launcher.RenderedProgressbar()
         Me.Panel1.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -104,6 +104,18 @@ Partial Class Form1
         Me.Panel3.Size = New System.Drawing.Size(204, 26)
         Me.Panel3.TabIndex = 10
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.SystemColors.Control
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Button1.Location = New System.Drawing.Point(0, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(98, 22)
+        Me.Button1.TabIndex = 13
+        Me.Button1.Text = "Retry Connection"
+        Me.Button1.UseVisualStyleBackColor = False
+        Me.Button1.Visible = False
+        '
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.SystemColors.Control
@@ -125,18 +137,6 @@ Partial Class Form1
         Me.Button2.TabIndex = 11
         Me.Button2.Text = "Launch"
         Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.SystemColors.Control
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Button1.Location = New System.Drawing.Point(0, 0)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(98, 22)
-        Me.Button1.TabIndex = 13
-        Me.Button1.Text = "Retry Connection"
-        Me.Button1.UseVisualStyleBackColor = False
-        Me.Button1.Visible = False
         '
         'RenderedProgressbar1
         '

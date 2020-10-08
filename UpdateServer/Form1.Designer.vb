@@ -22,7 +22,6 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -43,6 +42,7 @@ Partial Class Form1
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.RenderedProgressbar1 = New UpdateServer.RenderedProgressbar()
         Me.Panel10 = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -74,7 +74,6 @@ Partial Class Form1
         Me.Panel17 = New System.Windows.Forms.Panel()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.RenderedProgressbar1 = New UpdateServer.RenderedProgressbar()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -99,14 +98,6 @@ Partial Class Form1
         Me.Panel16.SuspendLayout()
         Me.Panel17.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(453, 12)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(0, 13)
-        Me.Label4.TabIndex = 8
         '
         'Panel1
         '
@@ -321,6 +312,25 @@ Partial Class Form1
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(796, 16)
         Me.Label2.TabIndex = 0
+        '
+        'RenderedProgressbar1
+        '
+        Me.RenderedProgressbar1.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.RenderedProgressbar1.Location = New System.Drawing.Point(0, 16)
+        Me.RenderedProgressbar1.Name = "RenderedProgressbar1"
+        Me.RenderedProgressbar1.ProgressBarColor1 = System.Drawing.Color.LimeGreen
+        Me.RenderedProgressbar1.ProgressBarColor2 = System.Drawing.Color.LimeGreen
+        Me.RenderedProgressbar1.ProgressBarText1 = ""
+        Me.RenderedProgressbar1.ProgressBarText2 = ""
+        Me.RenderedProgressbar1.ProgressBorderColor = System.Drawing.Color.Silver
+        Me.RenderedProgressbar1.ProgressMaximum1 = 100
+        Me.RenderedProgressbar1.ProgressMaximum2 = 100
+        Me.RenderedProgressbar1.ProgressMinimum1 = 0
+        Me.RenderedProgressbar1.ProgressMinimum2 = 0
+        Me.RenderedProgressbar1.ProgressValue1 = 0
+        Me.RenderedProgressbar1.ProgressValue2 = 0
+        Me.RenderedProgressbar1.Size = New System.Drawing.Size(796, 7)
+        Me.RenderedProgressbar1.TabIndex = 12
         '
         'Panel10
         '
@@ -661,25 +671,6 @@ Partial Class Form1
         Me.Button8.Text = "add new"
         Me.Button8.UseVisualStyleBackColor = True
         '
-        'RenderedProgressbar1
-        '
-        Me.RenderedProgressbar1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.RenderedProgressbar1.Location = New System.Drawing.Point(0, 16)
-        Me.RenderedProgressbar1.Name = "RenderedProgressbar1"
-        Me.RenderedProgressbar1.ProgressBarColor1 = System.Drawing.Color.LimeGreen
-        Me.RenderedProgressbar1.ProgressBarColor2 = System.Drawing.Color.LimeGreen
-        Me.RenderedProgressbar1.ProgressBarText1 = ""
-        Me.RenderedProgressbar1.ProgressBarText2 = ""
-        Me.RenderedProgressbar1.ProgressBorderColor = System.Drawing.Color.Silver
-        Me.RenderedProgressbar1.ProgressMaximum1 = 100
-        Me.RenderedProgressbar1.ProgressMaximum2 = 100
-        Me.RenderedProgressbar1.ProgressMinimum1 = 0
-        Me.RenderedProgressbar1.ProgressMinimum2 = 0
-        Me.RenderedProgressbar1.ProgressValue1 = 0
-        Me.RenderedProgressbar1.ProgressValue2 = 0
-        Me.RenderedProgressbar1.Size = New System.Drawing.Size(796, 7)
-        Me.RenderedProgressbar1.TabIndex = 12
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -688,7 +679,6 @@ Partial Class Form1
         Me.Controls.Add(Me.Panel10)
         Me.Controls.Add(Me.Panel8)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel12)
         Me.Name = "Form1"
@@ -726,10 +716,8 @@ Partial Class Form1
         Me.Panel16.PerformLayout()
         Me.Panel17.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label4 As Label
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button2 As Button
